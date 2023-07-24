@@ -1,10 +1,14 @@
+
+
 function UserList() {
   return (
-    <aside className="grid grid-cols-1">
+    <aside className="w-1/2 bg-black">
       <div
-        className="relative w-full max-w-[600px] h-20 shadow-[0_0_0_1px_black,_0_0_0_6px_white,
-    0_0_0_7px_black]"
-      >
+        className="own-message">
+        <p>Hola</p>
+      </div>
+      <div
+        className="others-message">
         <p>Hola</p>
       </div>
     </aside>
