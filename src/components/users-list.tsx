@@ -1,16 +1,15 @@
+import { type IMessage } from "../utils/types";
 
 
-function UserList() {
+function UserList({messages} : {messages: IMessage[]}) {
   return (
-    <aside className="w-1/2 bg-black">
-      <div
-        className="own-message">
-        <p>Hola</p>
-      </div>
-      <div
-        className="others-message">
-        <p>Hola</p>
-      </div>
+    <aside className="w-full bg-slate-500 overflow-y-scroll h-60">
+      {messages.map((message : IMessage,index : number) => {
+        return (
+        <div key={index} className={message.type} >
+          <p>{message.message}</p>
+        </div>
+      )})}
     </aside>
   );
 }
